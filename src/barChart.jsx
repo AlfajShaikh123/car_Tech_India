@@ -79,7 +79,7 @@ function BarChart() {
         setChartData(monthWisedata);
     };
     return (
-        <div className='flex '>
+        <div className='flex  '>
            
 
             <div className='flex p-5 justify-center'>
@@ -90,17 +90,35 @@ function BarChart() {
                         <Button variant="outlined" onClick={handleDayWiseClick}>Day</Button>
                         <Button variant="outlined" onClick={handleMonthWiseClick}>Month</Button>
                     </div>
-                    <p className='p-5 font-bold text-xl'>Sales</p>
-                    <Bar data={chartData} options={options} className=' h-[200px] ' />;
+                    <p className=' font-bold text-xl'>Sales</p>
+                    <Bar data={chartData} options={options} className=' h-[200px] w-[570px] ' />;
                 </div>
 
 
 
             </div>
             <div className=''>
-            <div className='p-5  bg-white border-2 border-gray-400 rounded-xl m-5 ms-[15px] drop-shadow-xl '>
+            <div className='p-5  bg-white border-2 w-[600px] border-gray-400 rounded-xl m-5 ms-[15px] drop-shadow-xl overflow-auto h-[450px] '>
                 <p className=' font-bold text-xl mt-2'>Sales</p>
-                <div className=' flex mt-2 ms-5 gap-1 text-center flex-wrap justify-center '>
+                <div className=' flex mt-2 ms-5 gap-1 text-center  '>
+                    <div className='border-2 border-gray-300 rounded-xl p-5 w-48 '>
+                        <img src="https://s7ap1.scene7.com/is/image/tatamotors/FearlessPurple-0?$PO-750-500-S$&fit=crop&fmt=webp-alpha" alt="" className='h-24' />
+                        <p>Nexon</p>
+                        <hr className='mt-3 bg-black' />
+                        <div className='flex space-x-3 justify-center'>
+                            <p className='font-bold text-xs mt-2'>40.5K</p>
+                            <p className='font-bold text-[10px] mt-[9px] text-green-700'>10.5 %</p>
+                        </div>
+                    </div>
+                    <div className='border-2 border-gray-300 rounded-xl p-5 w-48 '>
+                        <img src="https://s7ap1.scene7.com/is/image/tatamotors/FearlessPurple-0?$PO-750-500-S$&fit=crop&fmt=webp-alpha" alt="" className='h-24' />
+                        <p>Nexon</p>
+                        <hr className='mt-3 bg-black' />
+                        <div className='flex space-x-3 justify-center'>
+                            <p className='font-bold text-xs mt-2'>40.5K</p>
+                            <p className='font-bold text-[10px] mt-[9px] text-green-700'>10.5 %</p>
+                        </div>
+                    </div>
                     <div className='border-2 border-gray-300 rounded-xl p-5 w-48 '>
                         <img src="https://s7ap1.scene7.com/is/image/tatamotors/FearlessPurple-0?$PO-750-500-S$&fit=crop&fmt=webp-alpha" alt="" className='h-24' />
                         <p>Nexon</p>

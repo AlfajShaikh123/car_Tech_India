@@ -63,34 +63,57 @@ function DrawerComp() {
                 </div>
                 <List className="">
                     <NavLink to={"dashbord"}>
-                    <ListItem className="ms-7 w-[60px]">
-                        <img src="src\icons\dashboard.png" className="h-8" alt="" />
+                        <ListItem className="ms-7 w-[200px] group">
+                            <div></div>
+                            <ListItemPrefix className="">
+                                <img src="src\icons\dashboard.png" className="h-8" alt="" />
 
-                    </ListItem>
+                            </ListItemPrefix>
+
+                            <span className=" hidden font-bold group-hover:block ">Dashboard</span>
+                        </ListItem>
+
                     </NavLink>
                     <NavLink to={"inventory"}>
-                    <ListItem className="ms-7 w-[60px]">
-                        <img src="src\icons\increase.png" className="h-8" alt="" />
+                        <ListItem className="ms-7 w-[200px] group">
+                            <ListItemPrefix>
+                            <img src="src\icons\increase.png" className="h-8" alt="" />
+                            </ListItemPrefix>
+                            
+                            <span className=" hidden font-bold group-hover:block ">Sales Data</span>
 
-
-                    </ListItem>
+                        </ListItem>
                     </NavLink>
-                    
-                    <ListItem className="ms-7 w-[60px]">
-                        <img src="src\icons\call-center.png" className="h-8" alt="" />
 
+                    <ListItem className="ms-7 w-[250px] group">
+                    <ListItemPrefix>
+                    <img src="src\icons\call-center.png" className="h-8" alt="" />
+                    </ListItemPrefix>
+                       
+                    <span className=" hidden font-bold group-hover:block ">Customer inquiries</span>
                     </ListItem>
-                    <ListItem className="ms-7 w-[60px]">
-                        <img src="src\icons\info.png" className="h-8" alt="" />
 
+                    <ListItem className="ms-7 w-[200px] group">
+                    <ListItemPrefix>
+                    <img src="src\icons\info.png" className="h-8" alt="" />
+                    </ListItemPrefix>
+                       
+                    <span className=" hidden font-bold group-hover:block ">Car Inventory</span>
                     </ListItem>
-                    <ListItem className="ms-7 w-[60px]">
-                        <img src="src\icons\inventory.png" className="h-8" alt="" />
 
+                    <ListItem className="ms-7 w-[200px] group">
+                    <ListItemPrefix>
+                    <img src="src\icons\inventory.png" className="h-8" alt="" />
+                    </ListItemPrefix>
+                       
+                    <span className=" hidden font-bold group-hover:block ">Service Request</span>
                     </ListItem>
-                    <ListItem className="ms-7 w-[60px]">
-                        <img src="src\icons\settings.png" className="h-8" alt="" />
-
+                    <ListItem className="ms-7 w-[200px] group">
+                    <ListItemPrefix>
+                    <img src="src\icons\settings.png" className="h-8" alt="" />
+                    </ListItemPrefix>
+                      
+                    <span className=" hidden font-bold group-hover:block ">Settings</span>
                     </ListItem>
                 </List>
 
