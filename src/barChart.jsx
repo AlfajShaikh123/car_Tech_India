@@ -79,11 +79,29 @@ function BarChart() {
         setChartData(monthWisedata);
     };
     return (
-        <div className='flex'>
-            <div className='p-5 bg-white border-2 border-gray-400 rounded-xl  '>
-                <p className='p-5 font-bold text-xl mt-7'>Sales</p>
-                <div className='flex mt ms-5  text-center flex-wrap space-y-2'>
-                    <div className='border-2 border-gray-300 rounded-xl p-5 w-48'>
+        <div className='flex '>
+           
+
+            <div className='flex p-5 justify-center'>
+
+                <div className='bg-white p-5 border-2 border-gray-400 rounded-xl drop-shadow-xl '>
+                    <div className='ms-0 flex justify-end'>
+                        <Button variant="outlined" onClick={handleWeekWiseClick}>Week</Button>
+                        <Button variant="outlined" onClick={handleDayWiseClick}>Day</Button>
+                        <Button variant="outlined" onClick={handleMonthWiseClick}>Month</Button>
+                    </div>
+                    <p className='p-5 font-bold text-xl'>Sales</p>
+                    <Bar data={chartData} options={options} className=' h-[200px] ' />;
+                </div>
+
+
+
+            </div>
+            <div className=''>
+            <div className='p-5  bg-white border-2 border-gray-400 rounded-xl m-5 ms-[15px] drop-shadow-xl '>
+                <p className=' font-bold text-xl mt-2'>Sales</p>
+                <div className=' flex mt-2 ms-5 gap-1 text-center flex-wrap justify-center '>
+                    <div className='border-2 border-gray-300 rounded-xl p-5 w-48 '>
                         <img src="https://s7ap1.scene7.com/is/image/tatamotors/FearlessPurple-0?$PO-750-500-S$&fit=crop&fmt=webp-alpha" alt="" className='h-24' />
                         <p>Nexon</p>
                         <hr className='mt-3 bg-black' />
@@ -123,23 +141,8 @@ function BarChart() {
                 </div>
 
             </div>
-
-            <div className='flex p-5'>
-
-                <div className='bg-white p-5 border-2 border-gray-500 rounded-xl '>
-                    <div className='ms-0 flex justify-end'>
-                        <Button variant="outlined" onClick={handleWeekWiseClick}>Week</Button>
-                        <Button variant="outlined" onClick={handleDayWiseClick}>Day</Button>
-                        <Button variant="outlined" onClick={handleMonthWiseClick}>Month</Button>
-                    </div>
-                    <p className='p-5 font-bold text-xl'>Sales</p>
-                    <Bar data={chartData} options={options} className=' h-[400px]' />;
-                </div>
-
-
-
             </div>
-
+            
 
         </div>)
 }

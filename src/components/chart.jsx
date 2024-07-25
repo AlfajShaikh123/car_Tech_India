@@ -30,7 +30,7 @@ function Charts() {
         datasets: [
             {
                 label: 'Daily Data',
-                data: [12, 19, 3, 5, 2, 3, 7],
+                data: [82.5, 38.5,50.7, 10.7, 45.8, 30.75, 70.8],
                 fill: false,
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgba(255, 99, 132, 0.2)',
@@ -55,7 +55,7 @@ function Charts() {
         datasets: [
             {
                 label: 'Montly Data',
-                data: [100, 200, 300, 400, 500],
+                data: [82.5, 38.5,50.7, 10.7, 45.8, 30.75, 70.8],
                 fill: false,
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgba(255, 99, 132, 0.2)',
@@ -97,23 +97,23 @@ function Charts() {
         setChartData(monthWisedata);
     };
     return <>
-        <div className='flex '>
-            <div className='m-7  p-5 rounded-xl flex'>
-                <div className='border-2 p-3 rounded-xl bg-white'>
-                    <div className='ms-0 flex justify-end'>
+        <div className=' '>
+            <div className='  p-5 rounded-xl flex'>
+                <div className='border-2 p-3 rounded-xl bg-white border-gray-400 drop-shadow-xl'>
+                    <div className=' flex justify-end'>
                         <Button variant="outlined" onClick={handleWeekWiseClick}>Week</Button>
                         <Button variant="outlined" onClick={handleDayWiseClick}>Day</Button>
                         <Button variant="outlined" onClick={handleMonthWiseClick}>Month</Button>
                     </div>
 
-                    <Line data={chartData} options={options} className='text-4xl h-[400px]' />
+                    <Line data={chartData} options={options} className='text-4xl h-[300px] w-[55%]' />
                 </div>
 
 
-                <div className=' border-2 p-3 m-5 mt-24 rounded-xl bg-white w-[230px]' >
-                    <p>Sales volume</p>
-                    <div className='flex '>
-                        <div className='space-y-5 mt-4  '>
+                <div className=' border-2 p-3   rounded-xl bg-white ms-[20px]  border-gray-400 w-[45%] drop-shadow-xl' >
+                    <p className='mb-2 text-xl font-bold'>Sales volume</p>
+                    <div className='flex  '>
+                        <div className='space-y-5 mt-4   '>
                             <div className='flex space-x-3'>
                                 <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQVyD1n4XjSLTHijRu4Jy92O3E6yvlODS4zA&s" className='h-5 ' alt="" /></div>
                                 <p className='text-sm'>Honda</p>
@@ -137,7 +137,7 @@ function Charts() {
 
 
                         </div>
-                        <div className='p-3 space-y-3 ms-10 font-body text-sm'>
+                        <div className='p-3 space-y-3 ms-auto font-body text-sm'>
                             <p>82.2K</p>
                             <p>38.4K</p>
                             <p>50.4K</p>
@@ -150,7 +150,7 @@ function Charts() {
                 </div>
 
             </div>
-
+           
         </div>
         <BarChart />
 

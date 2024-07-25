@@ -1,10 +1,26 @@
 import { NavLink } from "react-router-dom"
 import DashBoard from "../dashboard/Dashboard"
+import React from "react";
 
-function DrawerComp()
-{
-    return(<>
-        <div className=" p-5 w-[400px] border-2 border-gray-100 rounded-xl ">
+import {
+    Drawer,
+    Button,
+    Typography,
+    IconButton,
+    List,
+    ListItem,
+    ListItemPrefix,
+    ListItemSuffix,
+    Chip,
+} from "@material-tailwind/react";
+
+function DrawerComp() {
+
+    const [open, setOpen] = React.useState(false);
+    const openDrawer = () => setOpen(true);
+    const closeDrawer = () => setOpen(false);
+    return (<>
+        {/* <div className=" p-5 w-[400px] border-2 border-gray-100 rounded-xl ">
        
             <ul className="m-5 space-y-5 fixed ">
                 <NavLink to={"dashbord"}>
@@ -19,7 +35,67 @@ function DrawerComp()
                 <li className="flex space-x-3 hover:bg-purple-50  hover: p-5 cursor-pointer"><img src="https://cdn-icons-png.flaticon.com/128/1436/1436706.png" className="h-6" alt="" /><p className="text-sm ">Service Requests </p> </li>
                 <li className="flex space-x-3 hover:bg-purple-50  hover: p-5 cursor-pointer "><img src="https://static-00.iconduck.com/assets.00/settings-icon-2048x2046-cw28eevx.png" className="h-6" alt="" /><p className="text-sm ">Settings </p> </li>
             </ul>
-        </div>
+        </div> */}
+        <React.Fragment className="">
+            {/* <Button onClick={openDrawer}>Open Drawer</Button> */}
+            <img src="src\icons\bars (1).png" className="h-8 w-7 m-4 fixed" alt="" onClick={openDrawer} />
+            <Drawer open={open} onClose={closeDrawer} className="w-[150px]  ">
+                <div className="mb-2 flex items-center justify-between p-4">
+                    <Typography variant="h5" color="blue-gray">
+                        Dashboard
+                    </Typography>
+                    {/* <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            className="h-8 w-5"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </IconButton> */}
+                </div>
+                <List className="">
+                    <NavLink to={"dashbord"}>
+                    <ListItem className="ms-7 w-[60px]">
+                        <img src="src\icons\dashboard.png" className="h-8" alt="" />
+
+                    </ListItem>
+                    </NavLink>
+                    <NavLink to={"inventory"}>
+                    <ListItem className="ms-7 w-[60px]">
+                        <img src="src\icons\increase.png" className="h-8" alt="" />
+
+
+                    </ListItem>
+                    </NavLink>
+                    
+                    <ListItem className="ms-7 w-[60px]">
+                        <img src="src\icons\call-center.png" className="h-8" alt="" />
+
+                    </ListItem>
+                    <ListItem className="ms-7 w-[60px]">
+                        <img src="src\icons\info.png" className="h-8" alt="" />
+
+                    </ListItem>
+                    <ListItem className="ms-7 w-[60px]">
+                        <img src="src\icons\inventory.png" className="h-8" alt="" />
+
+                    </ListItem>
+                    <ListItem className="ms-7 w-[60px]">
+                        <img src="src\icons\settings.png" className="h-8" alt="" />
+
+                    </ListItem>
+                </List>
+
+            </Drawer>
+        </React.Fragment>
     </>)
 }
 
